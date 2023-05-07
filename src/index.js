@@ -103,19 +103,21 @@ function markupGallery(imagesArr) {
         downloads,
       }) =>
         `<div class="photo-card">
-  <img src="${webformatURL}" alt="${tags}" data-src="${largeImageURL}" loading="lazy" width=200 />
+  <div class="img-thumb">
+	<img src="${webformatURL}" alt="${tags}" data-src="${largeImageURL}" loading="lazy" width=200 />
+	</div>
   <div class="info">
     <p class="info-item">
-      <b>Likes</b><br>${likes}
+      <b>Likes</b>${likes}
     </p>
     <p class="info-item">
-      <b>Views</b><br>${views}
+      <b>Views</b>${views}
     </p>
     <p class="info-item">
-      <b>Comments</b><br>${comments}
+      <b>Comments</b>${comments}
     </p>
     <p class="info-item">
-      <b>Downloads</b><br>${downloads}
+      <b>Downloads</b>${downloads}
     </p>
   </div>
 </div>`
