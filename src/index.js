@@ -1,6 +1,5 @@
 import Notiflix from 'notiflix';
 import axios from 'axios';
-import './css/styles.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -113,16 +112,16 @@ function markupGallery(imagesArr) {
 	</div>
   <div class="info">
     <p class="info-item">
-      <b>Likes</b>${likes}
+      <span><b>Likes</b></span><span>${likes}</span>
     </p>
     <p class="info-item">
-      <b>Views</b>${views}
+      <span><b>Views</b></span><span>${views}</span>
     </p>
     <p class="info-item">
-      <b>Comments</b>${comments}
+      <span><b>Comments</b></span><span>${comments}</span>
     </p>
     <p class="info-item">
-      <b>Downloads</b>${downloads}
+      <span><b>Downloads</b></span><span>${downloads}</span>
     </p>
   </div>
 </div>`
