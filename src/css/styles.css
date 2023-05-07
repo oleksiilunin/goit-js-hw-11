@@ -1,0 +1,14 @@
+/* button:disabled {
+	opacity: 0.5; */
+	/* уменьшаем прозрачность кнопки */
+	/* cursor: not-allowed; */
+	/* меняем курсор на "недоступный" */
+	/* pointer-events: none; */
+	/* отключаем события мыши, чтобы кнопка не реагировала на клики */
+/* } */
+
+/* .gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+} */
