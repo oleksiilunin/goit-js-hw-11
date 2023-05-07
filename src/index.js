@@ -82,6 +82,7 @@ async function fetchDataImages(query, page) {
       },
     });
     const dataImages = resp.data;
+    console.log(dataImages);
     return dataImages;
   } catch (error) {
     console.error(error);
