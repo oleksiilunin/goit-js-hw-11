@@ -46,6 +46,7 @@ async function createGallery() {
     const dataImages = await fetchDataImages(query, page);
     const imagesArr = dataImages.hits;
     const totalPages = dataImages.totalHits / per_page;
+    console.log(totalPages);
 
     if (!imagesArr.length) {
       return Notiflix.Notify.failure(
@@ -53,10 +54,14 @@ async function createGallery() {
       );
     }
     if (dataImages.totalHits <= per_page) {
+      console.log(imagesArr.length);
+      console.log(per_page);
       buttonPagination.style.display = 'none';
     }
 
     if (dataImages.totalHits > per_page) {
+      console.log(imagesArr.length);
+      console.log(per_page);
       buttonPagination.style.display = 'block';
     }
 
@@ -82,10 +87,10 @@ async function fetchDataImages(query, page) {
       },
     });
     const dataImages = resp.data;
-    console.log(dataImages);
+    console.log(resp);
     return dataImages;
   } catch (error) {
-    console.error(error);
+    console.log(error);
     Notiflix.Notify.failure('Oops. Something has gone wrong');
   }
 }
@@ -133,8 +138,7 @@ async function onClickPagination() {
     const dataImages = await fetchDataImages(query, page);
     const imagesArr = dataImages.hits;
     const totalPages = dataImages.totalHits / per_page;
-
-    if (page > totalPages) {
+    if (page >= totalPages) {
       Notiflix.Notify.failure(
         "We're sorry, but you've reached the end of search results."
       );
